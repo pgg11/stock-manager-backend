@@ -1,0 +1,23 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos SQLite local
+*.db
+
+# Carpeta instance de Flask
+instance/
+
+# Archivos de entorno/credenciales
+.env
+*.env
+
+# Archivos de logs
+*.log
