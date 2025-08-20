@@ -1,23 +1,29 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
 # Entorno virtual
 venv/
-ENV/
-env/
-.venv/
+.env/
 
-# Archivos de Python compilados
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Base de datos SQLite local
-*.db
-
-# Carpeta instance de Flask
+# Base de datos local
 instance/
+stock.db
 
-# Archivos de entorno/credenciales
-.env
+# Archivos de configuración de entorno
 *.env
 
-# Archivos de logs
+# Archivos de log
 *.log
+
+# Archivos de editor/IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

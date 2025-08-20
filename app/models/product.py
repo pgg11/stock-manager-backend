@@ -2,8 +2,10 @@ from app import db
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    price = db.Column(db.Float, nullable=False)
-    quantity = db.Column(db.Integer, default=0)
+    name = db.Column(db.String(120), nullable=False, unique=True)
+    markup = db.Column(db.Float, default=0.0)  # porcentaje de ganancia vigente
 
-    sale_items = db.relationship('SaleItem', backref='product', lazy=True)
+    batches = db.relationship('Batch', backref='product', cascade="all, delete-orphan")
+
+    def total_stock(self):
+        return sum(b.quantity for b in self.batches)
